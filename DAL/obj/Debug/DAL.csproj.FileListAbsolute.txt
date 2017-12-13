@@ -1,0 +1,16 @@
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\bin\Debug\DAL.dll.config
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\bin\Debug\DAL.dll
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\bin\Debug\DAL.pdb
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\bin\Debug\Entity.dll
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\bin\Debug\EntityFramework.dll
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\bin\Debug\Entity.pdb
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\bin\Debug\EntityFramework.xml
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\obj\Debug\DAL.dll
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\obj\Debug\DAL.pdb

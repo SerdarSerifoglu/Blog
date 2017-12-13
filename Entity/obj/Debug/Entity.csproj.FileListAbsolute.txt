@@ -1,0 +1,5 @@
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\Entity\bin\Debug\Entity.dll
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\Entity\bin\Debug\Entity.pdb
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\Entity\obj\Debug\Entity.dll
+c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\Entity\obj\Debug\Entity.pdb
