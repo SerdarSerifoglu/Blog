@@ -14,3 +14,23 @@ c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\bin\Debug\M
 c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\obj\Debug\DAL.dll
 c:\users\nuuklu\documents\visual studio 2015\Projects\SerdarBlog\DAL\obj\Debug\DAL.pdb
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\bin\Debug\DAL.dll.config
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\bin\Debug\DAL.dll
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\bin\Debug\DAL.pdb
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\bin\Debug\Entity.dll
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\bin\Debug\Entity.pdb
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\obj\Debug\DAL.dll
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\obj\Debug\DAL.pdb
+C:\Users\Heil Hitler\source\repos\Blog\DAL\obj\Debug\DAL.Migrations.InitialCreate.resources
+C:\Users\Heil Hitler\source\repos\Blog\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
+C:\Users\Heil Hitler\source\repos\Blog\DAL\obj\Debug\DAL.Migrations.fdd.resources

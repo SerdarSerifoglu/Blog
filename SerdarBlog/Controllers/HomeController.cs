@@ -19,6 +19,7 @@ namespace SerdarBlog.Controllers
             return View();
         }
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult IcerikEkle(Yazi yeniIcerik)
         {
             BlogRepository br = new BlogRepository();

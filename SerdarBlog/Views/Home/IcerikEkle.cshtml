@@ -4,68 +4,45 @@
     ViewBag.Title = "IcerikEkle";
 }
 <style>
-    .as{
-        max-width:none;
+    .as {
+        max-width: none;
     }
 </style>
 <h2>IcerikEkle</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("IcerikEkle","Home",FormMethod.Post,new {enctype="multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Yazi</h4>
         <hr />
-       
-        <div class="form-group as">
-            @Html.LabelFor(model => model.YaziIcerigi, htmlAttributes: new { @class = "control-label col-md-2" })
-           
-                @Html.TextAreaFor(x=>x.YaziIcerigi, 10, 150, new { @class="" })
-                
-           
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.EklenmeTarihi, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.EklenmeTarihi, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.EklenmeTarihi, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        
+            @Html.TextAreaFor(x => x.YaziIcerigi, 10, 150, new { })
+            @Html.TextBoxFor(x=>x.SeoTitle)
+            @Html.TextBoxFor(x => x.SeoDesc)
+            @Html.TextBoxFor(x => x.SeoKeywords)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.SeoTitle, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SeoTitle, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SeoTitle, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        
+        <input type="submit" />
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.SeoDesc, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SeoDesc, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SeoDesc, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.SeoKeywords, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SeoKeywords, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SeoKeywords, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Content/ckeditor/ckeditor.js"></script>
+    <script src="~/Content/ckfinder/ckfinder.js"></script>
+    <script type="text/javascript"></script>
+    <script>
+        var editor = CKEDITOR.instances['YaziIcerigi']
+        if (editor) { editor.destroy(true); }
+        CKEDITOR.replace('YaziIcerigi', {
+            enterMode: CKEDITOR.ENTER_BR,
+        });
+        CKFinder.setupCKEditor(null, '@Url.Content("~/Content/ckfinder/")');
+    </script>
+}
