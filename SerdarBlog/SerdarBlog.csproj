@@ -1267,6 +1267,18 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Upload\images\22853444_10155108393873806_8305303583459786067_n%281%29.jpg" />
+    <Content Include="Upload\images\22853444_10155108393873806_8305303583459786067_n%282%29.jpg" />
+    <Content Include="Upload\images\22853444_10155108393873806_8305303583459786067_n.jpg" />
+    <Content Include="Upload\images\394360_screenshots_20171029021220_1.jpg" />
+    <Content Include="Upload\images\resim%281%29.jpg" />
+    <Content Include="Upload\images\resim.jpg" />
+    <Content Include="Upload\_thumbs\Images\22853444_10155108393873806_8305303583459786067_n%281%29.jpg" />
+    <Content Include="Upload\_thumbs\Images\22853444_10155108393873806_8305303583459786067_n%282%29.jpg" />
+    <Content Include="Upload\_thumbs\Images\22853444_10155108393873806_8305303583459786067_n.jpg" />
+    <Content Include="Upload\_thumbs\Images\394360_screenshots_20171029021220_1.jpg" />
+    <Content Include="Upload\_thumbs\Images\resim%281%29.jpg" />
+    <Content Include="Upload\_thumbs\Images\resim.jpg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1304,10 +1316,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\IcerikEkle.cshtml" />
+    <Content Include="Views\Home\YaziDetay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

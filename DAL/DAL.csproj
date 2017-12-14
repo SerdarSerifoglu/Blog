@@ -31,11 +31,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -57,13 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201712140958269_InitialCreate.cs" />
-    <Compile Include="Migrations\201712140958269_InitialCreate.Designer.cs">
-      <DependentUpon>201712140958269_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712141001509_fdd.cs" />
-    <Compile Include="Migrations\201712141001509_fdd.Designer.cs">
-      <DependentUpon>201712141001509_fdd.cs</DependentUpon>
+    <Compile Include="Migrations\201712141356142_asd.cs" />
+    <Compile Include="Migrations\201712141356142_asd.Designer.cs">
+      <DependentUpon>201712141356142_asd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,11 +76,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712140958269_InitialCreate.resx">
-      <DependentUpon>201712140958269_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712141001509_fdd.resx">
-      <DependentUpon>201712141001509_fdd.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712141356142_asd.resx">
+      <DependentUpon>201712141356142_asd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

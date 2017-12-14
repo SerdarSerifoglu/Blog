@@ -7,24 +7,39 @@
     .as {
         max-width: none;
     }
+    .t{
+        max-width:none;
+        width:400px;
+
+    }
 </style>
 <h2>IcerikEkle</h2>
 
-@using (Html.BeginForm("IcerikEkle","Home",FormMethod.Post,new {enctype="multipart/form-data" }))
+@using (Html.BeginForm("IcerikEkle", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Yazi</h4>
-        <hr />
-
-        
-            @Html.TextAreaFor(x => x.YaziIcerigi, 10, 150, new { })
-            @Html.TextBoxFor(x=>x.SeoTitle)
-            @Html.TextBoxFor(x => x.SeoDesc)
-            @Html.TextBoxFor(x => x.SeoKeywords)
-
-        
+        <div>
+            <h3>Yazı İçeriği Düzenleme Ekranı</h3>
+            @Html.TextAreaFor(x => x.YaziIcerigi, new { @class = "as", cols = 150, row = 15 })
+        </div>
+        <br />
+        <div>
+            <p>Seo Title</p>
+            @Html.TextBoxFor(x => x.SeoTitle, new { @class = "t", placeholder = "Seo Title 57 karakterden fazla girmeyiniz", cols = 100 })
+        </div>
+        <br />
+        <div>
+            <p>Seo Description</p>
+            @Html.TextBoxFor(x => x.SeoDesc, new { @class = "t", placeholder = "Seo Description 160 karakterden fazla girmeyiniz" })
+        </div>
+        <br />
+        <div>
+            <p>Seo Keywords</p>
+            @Html.TextAreaFor(x => x.SeoKeywords, new { @class = "as", cols = 100, row = 2, placeholder = "Seo Anahtar Kelimeleri girerken aralara virgül koymalısınız. Örnek=araba, araba satışı"})
+        </div>
+        <br />
         <input type="submit" />
 
     </div>

@@ -24,9 +24,10 @@ namespace BLL
         {
             return db.Yazilar.Where(x => x.YaziIcerigi.Contains(arananYazi)).ToList();
         }
-        public Yazi YaziEkle(Yazi yeniYazi)
+        public void YaziEkle(Yazi yeniYazi)
         {
-            return db.Yazilar.Add(yeniYazi);
+            db.Yazilar.Add(yeniYazi);
+            db.SaveChanges();
         }
         public void YaziSil(int id)
         {

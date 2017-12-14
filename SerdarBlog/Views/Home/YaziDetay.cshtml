@@ -1,0 +1,20 @@
+﻿@using Entity
+@model Yazi
+@{
+    ViewBag.Title = "YaziDetay";
+}
+<style>
+    .duz{
+        margin:10px;
+    }
+</style>
+<div class="row col-md-12" >
+    <div class="col-md-10"></div>
+    <div class="col-md-2">
+        <a class="btn btn-primary btn-xs duz" href="#" role="button">Düzenle</a>
+    </div>
+</div>
+
+<div>@Html.Raw(Model.YaziIcerigi)</div>
+<div>Yayinlanma Tarihi: @Model.EklenmeTarihi</div>
+
