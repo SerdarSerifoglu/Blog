@@ -49,8 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Kategori.cs" />
+    <Compile Include="Like.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Yazi.cs" />
+    <Compile Include="Yorum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

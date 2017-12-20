@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using static BLL.Repository;
 
 namespace SerdarBlog.Controllers
 {
@@ -22,8 +23,9 @@ namespace SerdarBlog.Controllers
         [ValidateInput(false)]
         public ActionResult IcerikEkle(Yazi yeniIcerik)
         {
-            BlogRepository br = new BlogRepository();
-            br.YaziEkle(yeniIcerik);
+            YaziRep br = new YaziRep();
+            
+            br.Insert(yeniIcerik);
             ViewBag.SeoTitle = yeniIcerik.SeoTitle;
             ViewBag.Description = yeniIcerik.SeoDesc;
             ViewBag.Keywords = yeniIcerik.SeoKeywords;
@@ -31,8 +33,8 @@ namespace SerdarBlog.Controllers
         }
         public ActionResult YaziDetay(int id)
         {
-            BlogRepository bg = new BlogRepository();
-            Yazi gelenYazi=bg.YaziGetir(id);
+            YaziRep br = new YaziRep();
+            Yazi gelenYazi=br.GetById(id);
             ViewBag.SeoTitle = gelenYazi.SeoTitle;
             ViewBag.Description = gelenYazi.SeoDesc;
             ViewBag.Keywords = gelenYazi.SeoKeywords;
