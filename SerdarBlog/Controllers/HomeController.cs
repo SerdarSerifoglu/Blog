@@ -15,6 +15,11 @@ namespace SerdarBlog.Controllers
         {
             return View();
         }
+        public PartialViewResult KategoriSec()
+        {
+            return PartialView();
+        }
+
         public ActionResult IcerikEkle()
         {
             return View();

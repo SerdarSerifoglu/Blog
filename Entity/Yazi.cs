@@ -26,12 +26,14 @@ namespace Entity
         [Required(ErrorMessage = "Yazı içeriği boş bırakılamaz.")]
         [Column(TypeName = "text")]
         public string YaziIcerigi { get; set; }
-        [Required]
-        public string Etiket { get; set; }
+        [StringLength(20,ErrorMessage ="Etiket 20 karakterden fazla girilemez.")]
+        public string Etiket1 { get; set; }
+        [StringLength(20, ErrorMessage = "Etiket 20 karakterden fazla girilemez.")]
+        public string Etiket2 { get; set; }
+        [StringLength(20, ErrorMessage = "Etiket 20 karakterden fazla girilemez.")]
+        public string Etiket3 { get; set; }
         public DateTime EklenmeTarihi { get; set; }
-        public int BegenilmeSayisi { get; set; }
-
-
+        public int? BegenilmeSayisi { get; set; }
         [Required(ErrorMessage = "Seo Title bölümü boş bırakılamaz.")]
         [StringLength(57, ErrorMessage = "Seo Title yazısı 57 karakteri geçmemelidir.")]
         public string SeoTitle { get; set; }

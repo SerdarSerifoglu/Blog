@@ -9,7 +9,7 @@
     }
     .t{
         max-width:none;
-        width:400px;
+        width:600px;
 
     }
 </style>
@@ -21,8 +21,28 @@
 
     <div class="form-horizontal">
         <div>
+            <p>Yazı Başlığı</p>
+            @Html.TextBoxFor(x => x.YaziBasligi, new { @class = "t", placeholder = "Yazı başlığını giriniz", cols = 100 })
+        </div>
+        <br />
+        <div>
             <h3>Yazı İçeriği Düzenleme Ekranı</h3>
             @Html.TextAreaFor(x => x.YaziIcerigi, new { @class = "as", cols = 150, row = 15 })
+        </div>
+        <br />
+        <div>
+            <p>Yazı Etiketi-1:</p>
+            @Html.TextBoxFor(x => x.Etiket1, new { @class = "etiket", placeholder = "Yazı içeriğine göre etiket oluşturabilirsiniz.", cols = 100 })
+        </div>
+        <br />
+        <div>
+            <p>Yazı Etiketi-2:</p>
+            @Html.TextBoxFor(x => x.Etiket2, new { @class = "etiket", placeholder = "Yazı içeriğine göre etiket oluşturabilirsiniz.", cols = 100 })
+        </div>
+        <br />
+        <div>
+            <p>Yazı Etiketi-3:</p>
+            @Html.TextBoxFor(x => x.Etiket3, new { @class = "etiket", placeholder = "Yazı içeriğine göre etiket oluşturabilirsiniz.", cols = 100 })
         </div>
         <br />
         <div>
