@@ -57,9 +57,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201712212224516_k.cs" />
-    <Compile Include="Migrations\201712212224516_k.Designer.cs">
-      <DependentUpon>201712212224516_k.cs</DependentUpon>
+    <Compile Include="Migrations\201712261020524_kff.cs" />
+    <Compile Include="Migrations\201712261020524_kff.Designer.cs">
+      <DependentUpon>201712261020524_kff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712261023371_kkkkkk.cs" />
+    <Compile Include="Migrations\201712261023371_kkkkkk.Designer.cs">
+      <DependentUpon>201712261023371_kkkkkk.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,8 +80,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712212224516_k.resx">
-      <DependentUpon>201712212224516_k.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712261020524_kff.resx">
+      <DependentUpon>201712261020524_kff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712261023371_kkkkkk.resx">
+      <DependentUpon>201712261023371_kkkkkk.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

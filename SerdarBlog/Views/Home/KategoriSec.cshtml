@@ -1,1 +1,45 @@
-﻿
+﻿@*@using Entity
+@model List<Kategori>
+
+<p>Yazının Kategorisi Seç</p>
+@using (Html.BeginForm("KategoriSec", "Home", FormMethod.Post))
+{
+    <fieldset>
+        @foreach (Kategori item in Model)
+        {
+
+            <input class="rad" type="radio" name="animal" value="@item.KategoriId" title="@item.KategoriIcerik" />@item.KategoriBaslik<br />
+            }
+    </fieldset>
+    <input onclick="KategoriIdGonder()" type="submit" value="Kategori Seç" />
+}
+
+@section Scripts {
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <script>
+        function KategoriIdGonder() {
+            var id = $(".rad").val();
+            $.ajax({
+                url: "/Home/KategoriSec/",
+                method: "POST",
+                data: { "id": id },
+                success: function () {
+                    
+                }
+            });
+        }
+    </script>
+}*@
+
+
+
+
+
+
+
+
+
+
+
+

@@ -15,11 +15,18 @@
 </style>
 <h2>IcerikEkle</h2>
 
-@using (Html.BeginForm("IcerikEkle", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("IcerikEkle", "Home", FormMethod.Post,new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
+
+        @*<div >
+            @Html.Label("Kategoriler", new { @class = "col-md-4 control-label" })
+            <div class="col-md-10">
+                @Html.DropDownList("KategoriId", new SelectList((IEnumerable)ViewData["Kategoriler"],"TurID", "TurAdi"), new { @class = "form-control" })
+            </div>
+        </div>*@
         <div>
             <p>Yazı Başlığı</p>
             @Html.TextBoxFor(x => x.YaziBasligi, new { @class = "t", placeholder = "Yazı başlığını giriniz", cols = 100 })

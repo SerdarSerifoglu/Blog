@@ -9,9 +9,10 @@ namespace BLL
 {
    public class Repository
     {
-        public class KategoriRep : BaseRepository<Kategori> { }
+      
         public class YaziRep : BaseRepository<Yazi> { }
         public class YorumRep : BaseRepository<Yorum> { }
         public class LikeRep : BaseRepository<Like> { }
+        public class KategoriRep : BaseRepository<Kategori> { }
     }
 }

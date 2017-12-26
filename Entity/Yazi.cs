@@ -18,8 +18,7 @@ namespace Entity
         }
         [Key]
         public int YaziId { get; set; }
-        [ForeignKey("Kategori")]
-        public int YaziKategoriId { get; set; }
+        public string KullaniciId { get; set; }
         [Required]
         [StringLength(150,ErrorMessage ="Başlık 150 karakterden fazla girilemez.")]
         public string YaziBasligi { get; set; }
@@ -42,7 +41,7 @@ namespace Entity
         public string SeoDesc { get; set; }
         public string SeoKeywords { get; set; }
 
-        public virtual Kategori Kategori { get; set; }
+        
         public virtual List<Yorum> YaziYorumlari { get; set; }
         public virtual List<Like> YaziLikelari { get; set; }
 

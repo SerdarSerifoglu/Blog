@@ -2,7 +2,16 @@
 @{
     ViewBag.Title = "Kategori Ekle";
 }
-
+<style>
+    .kategori{
+        max-width:none;
+        width:300px;
+    }
+    .kategorii {
+        max-width: none;
+        width: 500px;
+    }
+</style>
 <h2>Kategori Ekle</h2>
 @using (Html.BeginForm("KategoriEkle", "Kategori", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
@@ -11,12 +20,12 @@
     <div class="form-horizontal">
         <div>
             <p>Kategori Başlığı</p>
-            @Html.TextBoxFor(x => x.KategoriBaslik, new { @class = "kategori", placeholder = "Kategori başlığını giriniz" })
+            @Html.TextBoxFor(x => x.KategoriBaslik, new { @class = "kategori", placeholder = "Kategori başlığını giriniz." })
         </div>
         <br />
         <div>
             <p>Kategorinin İçeriği</p>
-            @Html.TextBoxFor(x => x.KategoriIcerik, new { @class = "kategori", placeholder = "Kategori başlığını giriniz" })
+            @Html.TextBoxFor(x => x.KategoriIcerik, new { @class = "kategorii", placeholder = "Kategorinin içeriğini giriniz." })
         </div>
         <br />
        
