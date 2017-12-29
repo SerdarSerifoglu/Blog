@@ -29,5 +29,7 @@ namespace SerdarBlog.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Entity.Kategori> Kategoris { get; set; }
     }
 }

@@ -16,5 +16,6 @@ C:\Users\Heil Hitler\Source\Repos\Blog\DAL\obj\Debug\DAL.csprojResolveAssemblyRe
 C:\Users\Heil Hitler\Source\Repos\Blog\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Heil Hitler\Source\Repos\Blog\DAL\obj\Debug\DAL.dll
 C:\Users\Heil Hitler\Source\Repos\Blog\DAL\obj\Debug\DAL.pdb
-C:\Users\Heil Hitler\Source\Repos\Blog\DAL\obj\Debug\DAL.Migrations.kf.resources
 C:\Users\Heil Hitler\Source\Repos\Blog\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\obj\Debug\DAL.Migrations.kff.resources
+C:\Users\Heil Hitler\Source\Repos\Blog\DAL\obj\Debug\DAL.Migrations.kkkkkk.resources

@@ -173,6 +173,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\YonetimPaneliController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1274,6 +1275,11 @@
     <Content Include="YonetimPaneli\pages\icons.html" />
     <Content Include="Views\YonetimPaneli\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutYonetimPaneli.cshtml" />
+    <Content Include="Views\Kategori\Create.cshtml" />
+    <Content Include="Views\Kategori\Delete.cshtml" />
+    <Content Include="Views\Kategori\Details.cshtml" />
+    <Content Include="Views\Kategori\Edit.cshtml" />
+    <Content Include="Views\Kategori\Index.cshtml" />
     <None Include="YonetimPaneli\pages\index.cshtml" />
     <Content Include="YonetimPaneli\pages\login.html" />
     <Content Include="YonetimPaneli\pages\morris.html" />
@@ -1507,6 +1513,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{3b7b6d6d-1bf2-4913-8716-8e5aca87d422}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{24D33F32-6DF9-400D-A0D6-3857052F0932}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{0644aa08-b4a9-440a-9379-f8755c5aca21}</Project>

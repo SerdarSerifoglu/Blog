@@ -8,3 +8,8 @@ C:\Users\Heil Hitler\Source\Repos\Blog\Entity\bin\Debug\EntityFramework.SqlServe
 C:\Users\Heil Hitler\Source\Repos\Blog\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
 C:\Users\Heil Hitler\Source\Repos\Blog\Entity\obj\Debug\Entity.dll
 C:\Users\Heil Hitler\Source\Repos\Blog\Entity\obj\Debug\Entity.pdb
+C:\Users\Heil Hitler\Source\Repos\Blog\Entity\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Heil Hitler\Source\Repos\Blog\Entity\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Heil Hitler\Source\Repos\Blog\Entity\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Heil Hitler\Source\Repos\Blog\Entity\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Heil Hitler\Source\Repos\Blog\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache

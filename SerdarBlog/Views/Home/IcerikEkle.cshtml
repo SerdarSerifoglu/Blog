@@ -20,13 +20,14 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-
-        @*<div >
+        <div class="form-group">
             @Html.Label("Kategoriler", new { @class = "col-md-4 control-label" })
             <div class="col-md-10">
-                @Html.DropDownList("KategoriId", new SelectList((IEnumerable)ViewData["Kategoriler"],"TurID", "TurAdi"), new { @class = "form-control" })
+                @Html.DropDownList("KategoriId",new SelectList((IEnumerable)ViewData["Kategori"], "KategoriId", "KategoriAdi"), new { @class = "form-control" })
             </div>
-        </div>*@
+        </div>
+
+        
         <div>
             <p>Yazı Başlığı</p>
             @Html.TextBoxFor(x => x.YaziBasligi, new { @class = "t", placeholder = "Yazı başlığını giriniz", cols = 100 })
@@ -68,8 +69,8 @@
         </div>
         <br />
         <input type="submit" />
-
-    </div>
+        </div>
+  
 }
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

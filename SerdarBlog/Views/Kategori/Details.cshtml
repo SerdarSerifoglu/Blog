@@ -1,0 +1,34 @@
+﻿@model Entity.Kategori
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Kategori</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KategoriBaslik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KategoriBaslik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KategoriIcerik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KategoriIcerik)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.KategoriId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

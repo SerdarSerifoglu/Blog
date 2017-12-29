@@ -32,7 +32,8 @@ namespace SerdarBlog.Controllers
         public ActionResult IcerikEkle()
         {
             KategoriRep krep = new KategoriRep();
-            ViewData["Kategoriler"]=krep.GetAll();
+            ViewData["Kategori"]=krep.GetAll();
+            
             return View();
         }
         [HttpPost]
