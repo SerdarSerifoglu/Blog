@@ -175,6 +175,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\YaziController.cs" />
     <Compile Include="Controllers\YonetimPaneliController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1230,6 +1231,7 @@
     <Content Include="Content\ckfinder\translations.txt" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\modern-business.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -1280,6 +1282,11 @@
     <Content Include="Views\Kategori\Details.cshtml" />
     <Content Include="Views\Kategori\Edit.cshtml" />
     <Content Include="Views\Kategori\Index.cshtml" />
+    <Content Include="Views\Yazi\YaziEkle.cshtml" />
+    <Content Include="Views\Yazi\Delete.cshtml" />
+    <Content Include="Views\Yazi\Details.cshtml" />
+    <Content Include="Views\Yazi\Edit.cshtml" />
+    <Content Include="Views\Yazi\Index.cshtml" />
     <None Include="YonetimPaneli\pages\index.cshtml" />
     <Content Include="YonetimPaneli\pages\login.html" />
     <Content Include="YonetimPaneli\pages\morris.html" />

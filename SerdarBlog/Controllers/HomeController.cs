@@ -12,27 +12,19 @@ namespace SerdarBlog.Controllers
 {
     public class HomeController : Controller
     {
+        KategoriRep krep = new KategoriRep();
+        YaziRep yrep = new YaziRep();
         public ActionResult Index()
         {
-            return View();
+            
+            return View(yrep.GetAll());
         }
-        //public ActionResult KategoriSec()
-        //{
-        //    KategoriRep krep = new KategoriRep();
-        //    return View(krep.GetAll());
-        //}
-        //[HttpPost]
-        //public ActionResult KategoriSec(Kategori k,int id)
-        //{
-        //    k.KategoriId = id;
-        //    ViewBag.KategoriID = id;
-        //    return RedirectToAction("IcerikEkle");
-        //}
+        
         [Authorize(Roles = "Admin")]
         public ActionResult IcerikEkle()
         {
-            KategoriRep krep = new KategoriRep();
-            ViewData["Kategori"]=krep.GetAll();
+
+            ViewBag.KategoriId = new SelectList(krep.GetAll(), "KategoriId", "KategoriBaslik");
             
             return View();
         }
@@ -41,10 +33,9 @@ namespace SerdarBlog.Controllers
         [Authorize(Roles = "Admin")]
         public ActionResult IcerikEkle(Yazi yeniIcerik)
         {
-
-            YaziRep br = new YaziRep();
             yeniIcerik.KullaniciId = User.Identity.GetUserId();
-            br.Insert(yeniIcerik);
+            ViewBag.KategoriId = new SelectList(krep.GetAll(), "KategoriId", "KategoriBaslik",yeniIcerik.KategoriId);
+            yrep.Insert(yeniIcerik);
             ViewBag.SeoTitle = yeniIcerik.SeoTitle;
             ViewBag.Description = yeniIcerik.SeoDesc;
             ViewBag.Keywords = yeniIcerik.SeoKeywords;

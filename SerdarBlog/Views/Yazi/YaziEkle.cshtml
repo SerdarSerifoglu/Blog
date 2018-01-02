@@ -2,21 +2,21 @@
 @model Entity.Yazi
 
 @{
-    ViewBag.Title = "IcerikEkle";
+    ViewBag.Title = "YaziEkle";
 }
 <style>
     .as {
         max-width: none;
     }
-    .t{
-        max-width:none;
-        width:600px;
 
+    .t {
+        max-width: none;
+        width: 600px;
     }
 </style>
 <h2>IcerikEkle</h2>
 
-@using (Html.BeginForm("IcerikEkle", "Home", FormMethod.Post,new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("YaziEkle", "Yazi", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        
+
         <div>
             <p>Yazı Başlığı</p>
             @Html.TextBoxFor(x => x.YaziBasligi, new { @class = "t", placeholder = "Yazı başlığını giriniz", cols = 100 })
@@ -66,12 +66,12 @@
         <br />
         <div>
             <p>Seo Keywords</p>
-            @Html.TextAreaFor(x => x.SeoKeywords, new { @class = "as", cols = 100, row = 2, placeholder = "Seo Anahtar Kelimeleri girerken aralara virgül koymalısınız. Örnek=araba, araba satışı"})
+            @Html.TextAreaFor(x => x.SeoKeywords, new { @class = "as", cols = 100, row = 2, placeholder = "Seo Anahtar Kelimeleri girerken aralara virgül koymalısınız. Örnek=araba, araba satışı" })
         </div>
         <br />
         <input type="submit" />
-        </div>
-  
+    </div>
+
 }
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

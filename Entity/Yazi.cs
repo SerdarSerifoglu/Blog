@@ -20,6 +20,8 @@ namespace Entity
         public int YaziId { get; set; }
         public string KullaniciId { get; set; }
         [Required]
+        public int KategoriId { get; set; }
+        [Required]
         [StringLength(150,ErrorMessage ="Başlık 150 karakterden fazla girilemez.")]
         public string YaziBasligi { get; set; }
         [Required(ErrorMessage = "Yazı içeriği boş bırakılamaz.")]

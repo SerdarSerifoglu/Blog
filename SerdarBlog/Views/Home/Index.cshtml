@@ -1,31 +1,143 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@using Entity
+@model List<Yazi>
+@{
+             
+                ViewBag.Title = "Ö.Serdar ŞERİFOĞLU | BLOG";
 }
+<style>
+    /* Makes images fully responsive */
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    .img-responsive,
+    .thumbnail > img,
+    .thumbnail a > img,
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    /* ------------------- Carousel Styling ------------------- */
+
+    .carousel-inner {
+        border-radius: 15px;
+    }
+
+    .carousel-caption {
+        background-color: rgba(0,0,0,.5);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        padding: 0 0 10px 25px;
+        color: #fff;
+        text-align: left;
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        z-index: 15;
+        margin: 0;
+        padding: 0 25px 25px 0;
+        text-align: right;
+    }
+
+    .carousel-control.left,
+    .carousel-control.right {
+        background-image: none;
+    }
+
+
+    /* ------------------- Section Styling - Not needed for carousel styling ------------------- */
+
+    .section-white {
+        padding: 10px 0;
+    }
+
+    .section-white {
+        background-color: #fff;
+        color: #555;
+    }
+
+    @@media screen and (min-width: 768px) {
+
+        .section-white {
+            padding: 1.5em 0;
+        }
+    }
+
+    @@media screen and (min-width: 992px) {
+
+        .container {
+            max-width: 930px;
+        }
+    }
+</style>
+<!-- Slider bölümü-->
+<section class="row">
+    <section class="section-white">
+        <div class="container col-sm-8 col-sm-offset-2">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="http://placehold.it/800x400" alt="...">
+                        <div class="carousel-caption">
+                            <h2>Heading</h2>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="http://placehold.it/800x400" alt="...">
+                        <div class="carousel-caption">
+                            <h2>Heading</h2>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="http://placehold.it/800x400" alt="...">
+                        <div class="carousel-caption">
+                            <h2>Heading</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+</section>
+<br />
+<!-- Yazı içerik-->
+
+@foreach (Yazi item in Model)
+{
+     <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4><i class="fa fa-fw fa-check"></i> @item.YaziBasligi</h4>
+            </div>
+         
+            <div class="panel-body">
+                @Html.Raw(item.YaziIcerigi)
+
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+}
+   
+

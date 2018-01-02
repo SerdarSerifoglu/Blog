@@ -1,0 +1,26 @@
+﻿@model Entity.Yazi
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<div class="container col-sm-12">
+    <h2>@Model.YaziBasligi.ToUpper()</h2>
+    <h5><span class="glyphicon glyphicon-time"></span> Yazan <strong>Ö.Serdar Şerifoglu</strong>, @Model.EklenmeTarihi.ToShortDateString()</h5>
+    <h5>
+        @if (Model.Etiket1 != null)
+        {
+            <span class="label label-danger">@Model.Etiket1</span>
+        }
+        @if (Model.Etiket2 != null)
+        {
+            <span class="label label-primary">@Model.Etiket2</span>
+        }
+        @if (Model.Etiket3 != null)
+        {
+            <span class="label label-info">@Model.Etiket3</span>
+        }
+    </h5><br>
+    <p>@Html.Raw(Model.YaziIcerigi)</p>
+</div>

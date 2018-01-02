@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Entity.Yazi>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "YaziEkle")
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.KullaniciId)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.KategoriId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YaziBasligi)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.YaziIcerigi)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Etiket1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Etiket2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Etiket3)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.EklenmeTarihi)
+        </th>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.BegenilmeSayisi)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.SeoTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SeoDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SeoKeywords)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.KullaniciId)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.KategoriId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YaziBasligi)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.YaziIcerigi)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Etiket1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Etiket2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Etiket3)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.EklenmeTarihi)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.BegenilmeSayisi)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.SeoTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeoDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeoKeywords)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.YaziId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.YaziId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.YaziId })
+        </td>
+    </tr>
+}
+
+</table>

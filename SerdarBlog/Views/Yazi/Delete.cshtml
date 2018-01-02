@@ -1,0 +1,120 @@
+﻿@model Entity.Yazi
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Yazi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KullaniciId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KullaniciId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KategoriId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KategoriId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YaziBasligi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YaziBasligi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YaziIcerigi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YaziIcerigi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Etiket1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Etiket1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Etiket2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Etiket2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Etiket3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Etiket3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EklenmeTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EklenmeTarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BegenilmeSayisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BegenilmeSayisi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeoTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeoTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeoDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeoDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeoKeywords)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeoKeywords)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
