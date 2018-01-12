@@ -3,11 +3,16 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
+<style>
+    .buttonlar{
+        width:300px;
+        max-width:300px;
+    }
+</style>
+<h2>Yazılar</h2>
 
 <p>
-    @Html.ActionLink("Create New", "YaziEkle")
+    @Html.ActionLink("Yeni Yazı Ekle", "YaziEkle","Yazi", new { @class = "btn btn-success btn-sm" })
 </p>
 <table class="table">
     <tr>
@@ -88,10 +93,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.SeoKeywords)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.YaziId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.YaziId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.YaziId })
+        <td class="buttonlar">
+            
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.YaziId },new { @class="btn btn-primary btn-xs" }) 
+            @Html.ActionLink("Yazıya Git", "Details", new { id=item.YaziId }, new { @class = "btn btn-default btn-xs" }) 
+            @Html.ActionLink("Sil", "Delete", new { id=item.YaziId }, new { @class = "btn btn-danger btn-xs" })
         </td>
     </tr>
 }

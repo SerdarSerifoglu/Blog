@@ -47,9 +47,9 @@ namespace DAL.Migrations
            
             if (!context.Users.Any(u => u.UserName == "serdarserifoglu@gmail.com"))
             {
-                var store = new UserStore<Kullanici>(context);
-                var manager = new UserManager<Kullanici>(store);
-                var user = new Kullanici { UserName = "serdarserifoglu@gmail.com" };
+                var store = new UserStore<IdentityUser>(context);
+                var manager = new UserManager<IdentityUser>(store);
+                var user = new IdentityUser { UserName = "serdarserifoglu@gmail.com" };
 
                 manager.Create(user, "Aa123456_");
                 manager.AddToRole(user.Id, "Admin");

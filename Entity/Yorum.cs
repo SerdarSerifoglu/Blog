@@ -15,14 +15,13 @@ namespace Entity
         }
         [Key]
         public int YorumId { get; set; }
-        [Required]
-        [StringLength(100,ErrorMessage ="Yorum başlığı 100 karakterden fazla olamaz")]
-        public string YorumBaslik { get; set; }
+        public int YorumlananYaziId { get; set; }
         [Required]
         [StringLength(500, ErrorMessage = "Yorum içeriği 500 karakterden fazla olamaz")]
         public string YorumIcerik { get; set; }
         public Yazi YorumlananYazi { get; set; }
         public string YorumlayanUyeId { get; set; }
+        public string YotumlayanUsername { get; set; }
         public DateTime YorumTarihi { get; set; }
     }
 }

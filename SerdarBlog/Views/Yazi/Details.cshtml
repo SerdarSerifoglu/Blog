@@ -1,9 +1,16 @@
-﻿@model Entity.Yazi
+﻿@using Microsoft.AspNet.Identity
+@model Entity.Yazi
 
 @{
+    /**/
+
     ViewBag.Title = "Details";
 }
-
+<style>
+    .ss {
+        width: 730px;
+    }
+</style>
 
 <div class="container col-sm-12">
     <h2>@Model.YaziBasligi.ToUpper()</h2>
@@ -24,3 +31,56 @@
     </h5><br>
     <p>@Html.Raw(Model.YaziIcerigi)</p>
 </div>
+<div class="container col-sm-12">
+    <div class="well">
+        @if (Request.IsAuthenticated)
+        {
+
+            <h4>Yorum</h4>
+            <form role="form">
+                <div class="form-group">
+                    <textarea id="yorum" typeof="text" class="form-control" rows="3"></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit" id="gonder">Yorum Yap</button>
+            </form>
+        }
+        else
+        {
+            <h5>Yazıya yorum yapabilmek için kullanıcı girişi yapmalısınız.&nbsp &nbsp<a href="/Account/Login/"><b>Giriş Yap</b></a></h5>
+        }
+    </div>
+</div>
+
+    @foreach (var item in Model.YaziYorumlari)
+    {<div class="container col-sm-12">
+    <div class="well">
+        <h8 class="media-heading">@item.YotumlayanUsername  - &nbsp<small>@item.YorumTarihi</small></h8>
+        <h3>@item.YorumIcerik</h3>
+    </div>
+</div>
+    <div>
+    @if (User.Identity.GetUserId() == item.YorumlayanUyeId)
+    {
+        <a class="btn btn-danger" href="/Yazi/YorumSil">Sil</a>
+    }
+</div>
+    }
+
+
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#gonder").click(function () {
+        var yorumunuz = $("#yorum").val();
+        $.ajax({
+            url: '/Yazi/YorumYap/',
+            data: { yorum:yorumunuz, YaziId:@Model.YaziId },
+            type: "POST",
+            dataType: "json",
+            success: function (data) {
+                alert("Yorum Gönderildi" + yorumunuz);}
+            });
+        });
+    })
+</script>

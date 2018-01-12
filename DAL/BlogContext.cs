@@ -16,7 +16,7 @@ namespace DAL
         public virtual DbSet<Yazi> Yazilar { get; set; }
         public virtual DbSet<Like> Likelar { get; set; }
         public virtual DbSet<Yorum> Yorumlar { get; set; }
-        public virtual DbSet<Kullanici> Kullanicilar { get; set; }
+       
         public virtual DbSet<Kategori> Kategoriler { get; set; }
     }
 }

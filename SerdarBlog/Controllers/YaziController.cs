@@ -17,7 +17,7 @@ namespace SerdarBlog.Controllers
     {
         KategoriRep krep = new KategoriRep();
         YaziRep yrep = new YaziRep();
-
+        YorumRep yorumrep = new YorumRep();
         // GET: Yazi
         public ActionResult Index()
         {
@@ -121,5 +121,21 @@ namespace SerdarBlog.Controllers
             return RedirectToAction("Index");
         }
         
+        public JsonResult YorumYap(string yorum,int YaziId)
+        {
+           
+            if (yorum != null)
+            {
+                Yorum yeniyorum = new Yorum();
+                yeniyorum.YorumlayanUyeId=User.Identity.GetUserId();
+                yeniyorum.YotumlayanUsername = User.Identity.GetUserName();
+                yeniyorum.YorumlananYaziId = YaziId;
+                yeniyorum.YorumIcerik = yorum;
+                yeniyorum.YorumlananYazi = yrep.GetById(YaziId);
+                yorumrep.Insert(yeniyorum);
+               
+            }
+            return Json(false, JsonRequestBehavior.AllowGet);
+        }
     }
 }
