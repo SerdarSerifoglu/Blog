@@ -1,12 +1,15 @@
 ﻿@using Entity
 @model List<Yazi>
 @{
-             
-                ViewBag.Title = "Ö.Serdar ŞERİFOĞLU | BLOG";
-}
-<style>
-    /* Makes images fully responsive */
 
+    ViewBag.Title = "Ö.Serdar ŞERİFOĞLU | BLOG";
+}
+<script src="~/Scripts/ckeditor-responsive-images.js"></script>
+<style>
+    .panelcerceve {
+        border: 1px solid
+    }
+    /* Makes images fully responsive */
     .img-responsive,
     .thumbnail > img,
     .thumbnail a > img,
@@ -79,59 +82,68 @@
     }
 </style>
 <!-- Slider bölümü-->
-<section class="row">
-    <section class="section-white">
-        <div class="container col-sm-8 col-sm-offset-2">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ol>
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="http://placehold.it/800x400" alt="...">
-                        <div class="carousel-caption">
-                            <h2>Heading</h2>
+@*<section class="row">
+        <section class="section-white">
+            <div class="container col-sm-12 ">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="http://placehold.it/800x400" alt="...">
+                            <div class="carousel-caption">
+                                <h2>Heading</h2>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="http://placehold.it/800x400" alt="...">
+                            <div class="carousel-caption">
+                                <h2>Heading</h2>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="http://placehold.it/800x400" alt="...">
+                            <div class="carousel-caption">
+                                <h2>Heading</h2>
+                            </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <img src="http://placehold.it/800x400" alt="...">
-                        <div class="carousel-caption">
-                            <h2>Heading</h2>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="http://placehold.it/800x400" alt="...">
-                        <div class="carousel-caption">
-                            <h2>Heading</h2>
-                        </div>
-                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
                 </div>
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
             </div>
-        </div>
-    </section>
-</section>
+        </section>
+    </section>*@
 <br />
 <!-- Yazı içerik-->
 
 @foreach (Yazi item in Model)
 {
-     <div class="col-md-12">
+    <br /><br />
+    <div class="container col-md-12">
         <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4><i class="fa fa-fw fa-check"></i> @item.YaziBasligi</h4>
+            <div class="panel-heading" style="background-color:#e0f5fc">
+                <div class="container row">
+                    <div class="col-md-6">
+                        <h4><a href="/Yazi/Detay/@item.YaziId">@item.YaziBasligi</a></h4>
+                    </div>
+                    <div class="pull-right">
+                        <h4><span class="glyphicon glyphicon-eye-open"></span> <small>@item.OkunmaSayisi</small>   &nbsp&nbsp&nbsp   <span class="glyphicon glyphicon-comment"></span>  <small>@item.YaziYorumlari.Count()</small></h4>
+                    </div>
+                </div>
             </div>
-         
+
+
             <div class="panel-body">
                 @Html.Raw(item.YaziIcerigi)
 
@@ -139,5 +151,5 @@
         </div>
     </div>
 }
-   
+
 

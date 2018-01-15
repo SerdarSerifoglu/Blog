@@ -48,5 +48,6 @@ namespace BLL
             BlogContext.db.Entry(obj).State = System.Data.Entity.EntityState.Modified;
             BlogContext.db.SaveChanges();
         }
+       
     }
 }

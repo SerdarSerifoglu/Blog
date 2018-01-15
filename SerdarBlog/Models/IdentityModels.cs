@@ -33,5 +33,7 @@ namespace SerdarBlog.Models
         public System.Data.Entity.DbSet<Entity.Kategori> Kategoris { get; set; }
 
         public System.Data.Entity.DbSet<Entity.Yazi> Yazis { get; set; }
+
+        public System.Data.Entity.DbSet<Entity.Yorum> Yorums { get; set; }
     }
 }

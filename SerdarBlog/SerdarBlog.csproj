@@ -1259,6 +1259,7 @@
     <Content Include="Content\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Content\ckfinder\userfiles\.htaccess" />
+    <Content Include="Content\ckeditor\ckeditor-responsive-images.js" />
     <Content Include="YonetimPaneli\.gitignore" />
     <Content Include="YonetimPaneli\data\flot-data.js" />
     <Content Include="YonetimPaneli\data\morris-data.js" />
@@ -1284,9 +1285,12 @@
     <Content Include="Views\Kategori\Index.cshtml" />
     <Content Include="Views\Yazi\YaziEkle.cshtml" />
     <Content Include="Views\Yazi\Delete.cshtml" />
-    <Content Include="Views\Yazi\Details.cshtml" />
+    <Content Include="Views\Yazi\Detay.cshtml">
+      <BrowseToURL>~/Yazi/Detay</BrowseToURL>
+    </Content>
     <Content Include="Views\Yazi\Edit.cshtml" />
     <Content Include="Views\Yazi\Index.cshtml" />
+    <Content Include="Views\Yazi\Yorumlar.cshtml" />
     <None Include="YonetimPaneli\pages\index.cshtml" />
     <Content Include="YonetimPaneli\pages\login.html" />
     <Content Include="YonetimPaneli\pages\morris.html" />

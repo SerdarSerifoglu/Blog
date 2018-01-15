@@ -1,0 +1,164 @@
+﻿@using Microsoft.AspNet.Identity
+@model Entity.Yazi
+
+@{
+    /**/
+
+    ViewBag.Title = "Detay";
+}
+<style>
+    .ss {
+        width: 730px;
+    }
+
+    .yorumpanel {
+        margin-top: 40px;
+        padding: 0 10px;
+    }
+
+    .clickable {
+        cursor: pointer;
+    }
+
+    .panel-heading span {
+        margin-top: -20px;
+        font-size: 15px;
+    }
+</style>
+
+<div class="container col-sm-12">
+
+    <h2>@Model.YaziBasligi.ToUpper()</h2>
+
+
+    <h5><span class="glyphicon glyphicon-user"></span>Yazan <strong>Ö.Serdar Şerifoglu</strong> - <span class="glyphicon glyphicon-time"></span> @Model.EklenmeTarihi.ToShortDateString() - </h5>
+    <div class="btn btn-default pull-right"><span class="glyphicon glyphicon-star-empty"></span>Beğen</div>
+    <br>
+    <p>@Html.Raw(Model.YaziIcerigi)</p>
+</div>
+<hr />
+<div class="container row etiket">
+    <div class="col-md-10">
+        <h5>
+            Yazı Tagleri:
+            @if (Model.Etiket1 != null)
+            {
+                <span class="label label-danger">@Model.Etiket1</span>
+            }
+            @if (Model.Etiket2 != null)
+            {
+                <span class="label label-primary">@Model.Etiket2</span>
+            }
+            @if (Model.Etiket3 != null)
+            {
+                <span class="label label-info">@Model.Etiket3</span>
+            }
+        </h5>
+    </div>
+    <div class="col-md-2"><h5>Yazı @Model.OkunmaSayisi kez okundu</h5></div>
+</div>
+<hr />
+
+
+
+
+<div class="container">
+    <div class="row yorumpanel">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Yorumlar</h3>
+                    <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+                </div>
+                <div class="panel-body">
+                    <div class="container col-sm-12">
+                        <div class="well">
+                            @if (Request.IsAuthenticated)
+                            {
+
+                                <h4>Yorum</h4>
+                                <form role="form">
+                                    <div class="form-group">
+                                        <textarea id="yorum" typeof="text" class="form-control" rows="3"></textarea>
+                                    </div>
+                                    <button class="btn btn-primary" type="submit" id="gonder">Yorum Yap</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <h5>Yazıya yorum yapabilmek için kullanıcı girişi yapmalısınız.&nbsp &nbsp<a href="/Account/Login/"><b>Giriş Yap</b></a></h5>
+                            }
+                        </div>
+                    </div>
+
+                    @foreach (var item in Model.YaziYorumlari)
+                    {<div class="container col-sm-12">
+                            <div class="well">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <small class="media-heading">
+                                            <span class="glyphicon glyphicon-user"></span> @item.YotumlayanUsername   &nbsp- &nbsp
+                                            <span class="glyphicon glyphicon-time"></span> @item.YorumTarihi
+                                        </small>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        @if (User.Identity.GetUserId() == item.YorumlayanUyeId)
+                                        {
+                                            <a class="btn btn-danger btn-xs" href="/Yazi/YorumSil/@item.YorumId">Sil</a>
+                                        }
+                                    </div>
+                                </div>
+                                <h4>@item.YorumIcerik</h4>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery-3.2.1.js"></script>
+<!-- Yorum Yapma Jquery-AJAX-->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#gonder").click(function () {
+        var yorumunuz = $("#yorum").val();
+        $.ajax({
+            url: '/Yazi/YorumYap/',
+            data: { yorum:yorumunuz, YaziId:@Model.YaziId },
+            type: "POST",
+            dataType: "json",
+            success: function (data) {
+                alert("Yorum Gönderildi" +"  "+ yorumunuz);}
+            });
+        });
+    })
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            url: "/Yazi/OkunmaSayisi/",
+            data: { yaziid:@Model.YaziId},
+            type:"POST",
+        })
+    })
+</script>
+<script type="text/javascript">
+    $(document).on('click', '.panel-heading span.clickable', function (e) {
+        var $this = $(this);
+        if (!$this.hasClass('panel-collapsed')) {
+            $this.parents('.panel').find('.panel-body').slideUp();
+            $this.addClass('panel-collapsed');
+            $this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+        } else {
+            $this.parents('.panel').find('.panel-body').slideDown();
+            $this.removeClass('panel-collapsed');
+            $this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+        }
+    })
+</script>

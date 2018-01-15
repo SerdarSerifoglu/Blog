@@ -13,7 +13,7 @@
     @*<li>
         @Html.ActionLink(User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
     </li>*@
-    <li><a href="javascript:document.getElementById('logoutForm').submit()"> <span class="glyphicon glyphicon-log-out"></span> &nbsp Çıkış Yap </a></li>
+    <li><a href="javascript:document.getElementById('logoutForm').submit()"> <span class="glyphicon glyphicon-log-out"></span> &nbsp Çıkış Yap &nbsp &nbsp &nbsp</a></li>
 </ul>
     }
 }
@@ -21,7 +21,7 @@ else
 {
         <ul class="nav navbar-nav navbar-right">
             <li id="loginLink" ><a href="/Account/Login/"><span class="glyphicon glyphicon-log-in"></span>&nbsp Giriş Yap</a></li>
-            <li id="registerLink"><a href="/Account/Register/"><span class="glyphicon glyphicon-pencil"></span>&nbsp Kayıt Ol &nbsp&nbsp&nbsp</a></li>
+            <li id="registerLink"><a href="/Account/Register/"><span class="glyphicon glyphicon-pencil"></span>&nbsp Kayıt Ol &nbsp &nbsp &nbsp</a></li>
             @*<li>@Html.ActionLink("Kayıt Ol", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
             @*<li>@Html.ActionLink("Giriş Yap", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>*@
 

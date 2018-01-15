@@ -24,8 +24,8 @@ namespace SerdarBlog.Controllers
             return View(yrep.GetAll());
         }
 
-        // GET: Yazi/Details/5
-        public ActionResult Details(int id)
+        // GET: Yazi/Detay/5
+        public ActionResult Detay(int id)
         {
             Yazi gelenYazi = yrep.GetById(id);
             ViewBag.SeoTitle = gelenYazi.SeoTitle;
@@ -137,5 +137,27 @@ namespace SerdarBlog.Controllers
             }
             return Json(false, JsonRequestBehavior.AllowGet);
         }
+        public ActionResult YorumSil(int id)
+        {
+            var kullaniciid = User.Identity.GetUserId();
+            var yorum = yorumrep.GetById(id);
+            var yazi = yrep.GetById(yorum.YorumlananYaziId);
+            if (yorum.YorumlayanUyeId == kullaniciid)
+            {
+                yorumrep.Delete(id);
+                return RedirectToAction("Detay", "Yazi", new { id = yazi.YaziId });
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+        }
+        public ActionResult OkunmaSayisi(Yazi obj,int yaziid)
+        {
+            yrep.OkunmaSayisiArttir(obj, yaziid);
+            return View();
+        }
+
+        
     }
 }

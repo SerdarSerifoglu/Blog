@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Entity.Yorum>
+
+@{
+    ViewBag.Title = "Yorumlar";
+}
+
+<h2>Yorumlar</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.YorumlananYaziId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YorumIcerik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YorumlayanUyeId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YotumlayanUsername)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YorumTarihi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.YorumlananYaziId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YorumIcerik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YorumlayanUyeId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YotumlayanUsername)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YorumTarihi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.YorumId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.YorumId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.YorumId })
+        </td>
+    </tr>
+}
+
+</table>

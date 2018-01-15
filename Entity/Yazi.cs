@@ -15,6 +15,8 @@ namespace Entity
             EklenmeTarihi = DateTime.Now;
             YaziYorumlari = new List<Yorum>();
             YaziLikelari = new List<Like>();
+            BegenilmeSayisi = 0;
+            OkunmaSayisi = 1;
         }
         [Key]
         public int YaziId { get; set; }
@@ -34,7 +36,7 @@ namespace Entity
         [StringLength(20, ErrorMessage = "Etiket 20 karakterden fazla girilemez.")]
         public string Etiket3 { get; set; }
         public DateTime EklenmeTarihi { get; set; }
-        public int? BegenilmeSayisi { get; set; }
+        
         [Required(ErrorMessage = "Seo Title bölümü boş bırakılamaz.")]
         [StringLength(57, ErrorMessage = "Seo Title yazısı 57 karakteri geçmemelidir.")]
         public string SeoTitle { get; set; }
@@ -42,8 +44,8 @@ namespace Entity
         [StringLength(160, ErrorMessage = "Seo Description yazısı 160 karakteri geçmemelidir.")]
         public string SeoDesc { get; set; }
         public string SeoKeywords { get; set; }
-
-        
+        public int? BegenilmeSayisi { get; set; }
+        public int? OkunmaSayisi { get; set; }
         public virtual List<Yorum> YaziYorumlari { get; set; }
         public virtual List<Like> YaziLikelari { get; set; }
 
