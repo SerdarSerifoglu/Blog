@@ -1,12 +1,12 @@
 ﻿@model Entity.Yazi
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "YazıSil";
 }
 
-<h2>Delete</h2>
+<h2>Yazı Sil</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Yazıyı silmek istediğine eminmisin?</h3>
 <div>
     <h4>Yazi</h4>
     <hr />
@@ -113,8 +113,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Yazıyı Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Yazı Listesine Dön", "Index")
         </div>
     }
 </div>

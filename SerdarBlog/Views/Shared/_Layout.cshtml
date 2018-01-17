@@ -22,10 +22,12 @@
 <body>
     <nav class="navbar navbar-inverse" style="background-color:#002933">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">Ö.Serdar ŞERİFOĞLU - BLOG</a>
+            <a href="/Home/Index/" class="navbar-brand">Ö.Serdar ŞERİFOĞLU - BLOG</a>
             <div class="collapse navbar-collapse acKapa">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/Home/Index/" class="a"><span class="glyphicon glyphicon-home "></span>&nbsp Anasayfa</a></li>
+                    <li><a href="/Yazi/BenKimim/" class="a"><span class="glyphicon glyphicon-home "></span>&nbsp Ben Kimim</a></li>
+                    <li><a href="/Yazi/EnCokOkunanYazilar/" class="a"><span class="glyphicon glyphicon-home "></span>&nbsp En Çok Okunanlar</a></li>
                     @if (Request.IsAuthenticated && User.IsInRole("Admin"))
     {
                 <li class="dropdown">
@@ -35,23 +37,20 @@
                         <li><a href="/Kategori/" class="b">Kategoriler</a></li>
                         <li><a href="/Yazi/YaziEkle/" class="b">Yazı Ekle</a></li>
                         <li><a href="/Yazi/" class="b">Yazılar</a></li>
-                        <li><a href="#" class="b">Yorumlar</a></li>
                     </ul>
                 </li>
 }
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-arrow-down"></span> &nbsp Kategoriler </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" class="b">Genel</a></li>
-                            <li><a href="#" class="b">Basketbol</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/Yazi/Index/" class="a"><span class="glyphicon glyphicon-file"></span>&nbsp Yazılar</a></li>
+
+                    @if (Request.IsAuthenticated)
+    {
+                <li><a href="/Yazi/Yorumlarim/" class="a"><span class="glyphicon glyphicon-file"></span>&nbsp  Yorumlarım</a></li>
+}
+
 
                     <li>@Html.Partial("_LoginPartial")</li>
                 </ul>
             </div>
-            
+
         </div>
         <!-- /.container -->
     </nav>
@@ -59,18 +58,18 @@
 
 
     <div class="container col-md-12">
-       
+
         @RenderBody()
     </div>
 
     <div class="container col-md-12">
         <footer>
             <hr />
-            <p>&copy; @DateTime.Now.Year </p>
+            <p>&copy; @DateTime.Now.Year - Sitenin tüm hakları saklıdır.</p>
         </footer>
     </div>
-    
-   
+
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

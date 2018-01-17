@@ -1,5 +1,5 @@
 ﻿@using Entity
-@model List<Yazi>
+@model IEnumerable<Yazi>
 @{
 
     ViewBag.Title = "Ö.Serdar ŞERİFOĞLU | BLOG";
@@ -135,7 +135,7 @@
             <div class="panel-heading" style="background-color:#e0f5fc">
                 <div class="container row">
                     <div class="col-md-6">
-                        <h4><a href="/Yazi/Detay/@item.YaziId">@item.YaziBasligi</a></h4>
+                        <h4><a href="/Yazi/Detay/@item.YaziId">@item.YaziBasligi.ToUpper()</a></h4>
                     </div>
                     <div class="pull-right">
                         <h4><span class="glyphicon glyphicon-eye-open"></span> <small>@item.OkunmaSayisi</small>   &nbsp&nbsp&nbsp   <span class="glyphicon glyphicon-comment"></span>  <small>@item.YaziYorumlari.Count()</small></h4>

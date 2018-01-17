@@ -16,6 +16,7 @@ C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\SerdarBlog.pdb
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\Antlr3.Runtime.dll
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\BLL.dll
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\CKFinder.dll
+C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\DAL.dll
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\Entity.dll
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\EntityFramework.dll
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\EntityFramework.SqlServer.dll
@@ -43,9 +44,10 @@ C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\System.Web.WebPages.Deploy
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\System.Web.WebPages.dll
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\System.Web.WebPages.Razor.dll
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\WebGrease.dll
-C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\DAL.dll
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\BLL.pdb
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\BLL.dll.config
+C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\DAL.pdb
+C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\DAL.dll.config
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\Entity.pdb
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\Entity.dll.config
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\CKFinder.pdb
@@ -73,8 +75,6 @@ C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\Microsoft.Owin.Security.OA
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\DAL.pdb
-C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\bin\DAL.dll.config
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\obj\Debug\SerdarBlog.csprojResolveAssemblyReference.cache
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\obj\Debug\SerdarBlog.csproj.CoreCompileInputs.cache
 C:\Users\Heil Hitler\Source\Repos\Blog\SerdarBlog\obj\Debug\SerdarBlog.dll

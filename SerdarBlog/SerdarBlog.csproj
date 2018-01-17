@@ -176,7 +176,6 @@
     <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\YaziController.cs" />
-    <Compile Include="Controllers\YonetimPaneliController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1260,6 +1259,8 @@
     <Content Include="Content\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Content\ckfinder\userfiles\.htaccess" />
     <Content Include="Content\ckeditor\ckeditor-responsive-images.js" />
+    <Content Include="Upload\resimler\facebook-icon.png" />
+    <Content Include="Upload\resimler\linkedin-icon-logo-FBADE03110-seeklogo.com.png" />
     <Content Include="YonetimPaneli\.gitignore" />
     <Content Include="YonetimPaneli\data\flot-data.js" />
     <Content Include="YonetimPaneli\data\morris-data.js" />
@@ -1291,6 +1292,9 @@
     <Content Include="Views\Yazi\Edit.cshtml" />
     <Content Include="Views\Yazi\Index.cshtml" />
     <Content Include="Views\Yazi\Yorumlar.cshtml" />
+    <Content Include="Views\Yazi\Yorumlarim.cshtml" />
+    <Content Include="Views\Yazi\BenKimim.cshtml" />
+    <Content Include="Views\Yazi\EnCokOkunanYazilar.cshtml" />
     <None Include="YonetimPaneli\pages\index.cshtml" />
     <Content Include="YonetimPaneli\pages\login.html" />
     <Content Include="YonetimPaneli\pages\morris.html" />

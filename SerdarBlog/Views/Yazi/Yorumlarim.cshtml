@@ -1,0 +1,27 @@
+﻿@using Entity
+@model List<Yorum>
+@{
+    ViewBag.Title = "Yorumlarim";
+}
+
+<h2>Yorumlarim</h2>
+@foreach (var item in Model)
+{<div class="container col-sm-12">
+        <div class="well">
+            <div> <a href="/Yazi/Detay/@item.YorumlananYaziId">@item.YorumlananYazi.YaziBasligi</a></div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <small class="media-heading">
+                        <span class="glyphicon glyphicon-user"></span> @item.YotumlayanUsername   &nbsp- &nbsp
+                        <span class="glyphicon glyphicon-time"></span> @item.YorumTarihi
+                    </small>
+                </div>
+                <div class="col-sm-4">
+                        <a class="btn btn-danger btn-xs" href="/Yazi/YorumSil/@item.YorumId">Sil</a>
+                </div>
+            </div>
+            <h4>@item.YorumIcerik</h4>
+        </div>
+    </div>
+}
+

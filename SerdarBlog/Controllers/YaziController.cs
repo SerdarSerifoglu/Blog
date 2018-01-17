@@ -23,7 +23,16 @@ namespace SerdarBlog.Controllers
         {
             return View(yrep.GetAll());
         }
-
+        public ActionResult BenKimim()
+        {
+            return View();
+        }
+        public ActionResult EnCokOkunanYazilar()
+        {
+            var tumyazilar=yrep.GetAll();
+            var siraliokunmasayisi=tumyazilar.OrderByDescending(x => x.OkunmaSayisi);
+            return View(siraliokunmasayisi);
+        }
         // GET: Yazi/Detay/5
         public ActionResult Detay(int id)
         {
@@ -85,8 +94,6 @@ namespace SerdarBlog.Controllers
                 degisenYazi.Etiket1 = yazi.Etiket1;
                 degisenYazi.Etiket2 = yazi.Etiket2;
                 degisenYazi.Etiket3 = yazi.Etiket3;
-                //degisenYazi.KategoriId = yazi.KategoriId;
-                //degisenYazi.KullaniciId = yazi.KullaniciId;
                 degisenYazi.SeoDesc = yazi.SeoDesc;
                 degisenYazi.SeoKeywords = yazi.SeoKeywords;
                 degisenYazi.SeoTitle = yazi.SeoTitle;
@@ -157,7 +164,18 @@ namespace SerdarBlog.Controllers
             yrep.OkunmaSayisiArttir(obj, yaziid);
             return View();
         }
+        public ActionResult Yorumlarim(string uyeid)
+        {
+           
+                uyeid = User.Identity.GetUserId();
+                var yorumlar = yorumrep.GetAll();
+                var uyeninyorumlari = yorumlar.Where(x => x.YorumlayanUyeId == uyeid).ToList();
+                return View(uyeninyorumlari);
+          
+           
 
+            
+        }
         
     }
 }

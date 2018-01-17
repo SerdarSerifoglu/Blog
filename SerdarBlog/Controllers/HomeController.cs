@@ -16,8 +16,9 @@ namespace SerdarBlog.Controllers
         YaziRep yrep = new YaziRep();
         public ActionResult Index()
         {
-            
-            return View(yrep.GetAll());
+            var yazilar = yrep.GetAll();
+            var tarihselsiraliyazilar = yazilar.OrderByDescending(x => x.EklenmeTarihi);
+            return View(tarihselsiraliyazilar);
         }
         
         [Authorize(Roles = "Admin")]
